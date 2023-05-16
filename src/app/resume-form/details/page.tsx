@@ -1,5 +1,6 @@
-import Pagination from "@/components/Pagination";
 import Link from "next/link";
+import Pagination from "@/components/Pagination";
+import DetailsForm from "@/components/DetailsForm";
 
 const details = () => {
   return (
@@ -13,6 +14,9 @@ const details = () => {
 
       {/* Pagination */}
       <Pagination completed={0} />
+
+      {/* Inputs */}
+      <DetailsForm />
 
       {/* Buttons */}
       <div className="flex space-x-3 justify-center items-center">

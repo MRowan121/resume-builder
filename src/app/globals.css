@@ -17,4 +17,7 @@ body {
   .pageNum {
     @apply text-white bg-neutral-700 w-10 h-10 flex justify-center items-center rounded-full;
   }
+  .detailsForm {
+    @apply bg-neutral-800 text-stone-50 text-sm h-9 w-full leading-[34px] block text-left px-3 border-[1px] border-transparent rounded;
+  }
 }
