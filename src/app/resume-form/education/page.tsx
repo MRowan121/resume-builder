@@ -1,3 +1,4 @@
+import DetailsForm from "@/components/DetailsForm";
 import Pagination from "@/components/Pagination";
 import Link from "next/link";
 
@@ -13,6 +14,9 @@ const education = () => {
 
       {/* Pagination */}
       <Pagination completed={4} />
+
+      {/* Inputs */}
+      <DetailsForm />
 
       {/* Buttons */}
       <div className="flex space-x-3 justify-center items-center">
