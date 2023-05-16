@@ -8,13 +8,13 @@ body {
 }
 
 @layer components {
-  .createBtn {
-    @apply py-3 px-5 rounded-md cursor-pointer
+  .stdBtn {
+    @apply py-3 px-5 rounded-md cursor-pointer;
   }
   .btnHover {
-    @apply hover:text-white hover:bg-violet-600 hover:brightness-110
+    @apply hover:text-white hover:bg-violet-600 hover:brightness-110;
   }
   .pageNum {
-    @apply text-white bg-neutral-700 w-10 h-10 flex justify-center items-center rounded-full
+    @apply text-white bg-neutral-700 w-10 h-10 flex justify-center items-center rounded-full;
   }
 }
