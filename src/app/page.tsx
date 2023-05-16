@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import formImage from "../utilities/form-screenshot.png";
+import formImage from "../utilities/form-image.png";
 
 export default function Home() {
   return (
@@ -9,7 +9,7 @@ export default function Home() {
         <h2 className="text-xl">
           <span className="text-violet-600">NextJS</span> Resume Builder
         </h2>
-        <Link href="/details">
+        <Link href="/resume-form/details">
           <button className="text-violet-600 border-[1px] border-violet-600 stdBtn btnHover">
             Create Resume
           </button>
@@ -26,7 +26,7 @@ export default function Home() {
           format to ensure you get seen by recruiters
         </p>
         <Image src={formImage} alt="form" width={900} />
-        <Link href="/details">
+        <Link href="/resume-form/details">
           <button className="text-white bg-violet-600 mt-7 stdBtn btnHover">
             Create Resume
           </button>
