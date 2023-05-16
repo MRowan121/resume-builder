@@ -14,4 +14,7 @@ body {
   .btnHover {
     @apply hover:text-white hover:bg-violet-600 hover:brightness-110
   }
+  .pageNum {
+    @apply text-white bg-neutral-700 w-10 h-10 flex justify-center items-center rounded-full
+  }
 }

@@ -1,5 +1,6 @@
 import Image from 'next/image'
-import formImage from '../app/form-screenshot.png'
+import Link from 'next/link'
+import formImage from '../utilities/form-screenshot.png'
 
 
 export default function Home() {
@@ -7,7 +8,9 @@ export default function Home() {
     <main className='mt-16 mx-10 p-4 min-h-screen'>
       <header className='flex justify-between items-center font-semibold'>
         <h2 className='text-xl'><span className='text-violet-600'>NextJS</span> Resume Builder</h2>
-        <button className='text-violet-600 border-[1px] border-violet-600 createBtn btnHover'>Create Resume</button>
+        <Link href="/details">
+          <button className='text-violet-600 border-[1px] border-violet-600 createBtn btnHover'>Create Resume</button>
+        </Link>
       </header>
       <section className='pt-20 flex flex-col items-center text-center'>
         <h1 className='text-3xl font-bold'>
@@ -21,7 +24,9 @@ export default function Home() {
           alt='form'
           width={900}
         />
-        <button className='text-white bg-violet-600 mt-7 createBtn btnHover'>Create Resume</button>
+        <Link href="/details">
+          <button className='text-white bg-violet-600 mt-7 createBtn btnHover'>Create Resume</button>
+        </Link>
       </section>
     </main>
   )
