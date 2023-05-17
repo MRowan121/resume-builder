@@ -16,9 +16,11 @@ const Pagination = ({ completed }: PageProps) => {
   const checkCompletion = (i: number) => {
     return (
       <p
-        className={`pageNum ${
-          i === completed ? "border-2 border-violet-600" : null
-        } ${i < completed ? "bg-violet-600" : null}`}
+        className={`
+          pageNum 
+          ${i === completed ? "border-2 border-violet-600" : null} 
+          ${i < completed ? "bg-violet-600" : null}
+        `}
       >
         {i < completed ? <BsCheckLg className="text-3xl" /> : `${i + 1}`}
       </p>
@@ -33,9 +35,11 @@ const Pagination = ({ completed }: PageProps) => {
       {checkCompletion(index)}
       <p>{step}</p>
       <div
-        className={`${index < completed ? "border-purple-600" : null} ${
-          index + 1 === 5 ? "hidden" : null
-        } w-10 border-[1px] border-white`}
+        className={`
+          ${index < completed ? "border-purple-600" : null} 
+          ${index + 1 === 5 ? "hidden" : null} 
+          w-10 border-[1px] border-white
+        `}
       />
     </div>
   ));
