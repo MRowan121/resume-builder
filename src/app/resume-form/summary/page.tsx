@@ -5,7 +5,7 @@ import Link from "next/link";
 const summary = () => {
   return (
     <>
-      <div className="mt-16 mx-auto p-4 max-w-[960px]">
+      <div className="mt-16 mx-auto px-4 max-w-[960px]">
         {/* Back Button */}
         <Link href="/resume-form/details">
           <button className="text-white bg-violet-600 stdBtn mb-10">

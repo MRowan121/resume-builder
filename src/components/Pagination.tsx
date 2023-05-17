@@ -28,23 +28,22 @@ const Pagination = ({ completed }: PageProps) => {
   };
 
   const displaySteps = steps.map((step, index) => (
-    <div
-      key={index}
-      className="flex justify-center items-center text-lg space-x-4"
-    >
-      {checkCompletion(index)}
-      <p>{step}</p>
+    <>
+      <div key={index} className="flex justify-center items-center ">
+        {checkCompletion(index)}
+        <p className="ml-4">{step}</p>
+      </div>
       <div
         className={`
-          ${index < completed ? "border-purple-600" : null} 
+          ${index < completed ? "bg-violet-600" : "bg-white"} 
           ${index + 1 === 5 ? "hidden" : null} 
-          w-10 border-[1px] border-white
+           h-[2px] flex-1 mx-4 block
         `}
       />
-    </div>
+    </>
   ));
 
-  return <div className="p-5 flex space-x-4">{displaySteps}</div>;
+  return <div className="py-5 flex items-center">{displaySteps}</div>;
 };
 
 export default Pagination;
