@@ -1,4 +1,4 @@
-import DetailsForm from "@/components/DetailsForm";
+import WorkForm from "@/components/WorkForm";
 import Pagination from "@/components/Pagination";
 import Link from "next/link";
 
@@ -17,7 +17,7 @@ const work = () => {
         <Pagination completed={2} />
 
         {/* Inputs */}
-        <DetailsForm />
+        <WorkForm />
 
         {/* Buttons */}
         <div className="flex space-x-3 justify-center items-center">
