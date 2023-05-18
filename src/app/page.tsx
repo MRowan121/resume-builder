@@ -25,7 +25,7 @@ export default function Home() {
           Completely free to use, create, & download Clean ATS-friendly resume
           format to ensure you get seen by recruiters
         </p>
-        <Image src={formImage} alt="form" width={900} />
+        <Image src={formImage} alt="form" width={900} priority />
         <Link href="/resume-form">
           <button className="text-white bg-violet-600 mt-7 stdBtn btnHover">
             Create Resume
