@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import { BsCheckLg } from "react-icons/bs";
 
 type PageProps = {
@@ -28,8 +29,8 @@ const Pagination = ({ currentPage }: PageProps) => {
   };
 
   const displaySteps = steps.map((step, index) => (
-    <>
-      <div key={index} className="flex justify-center items-center ">
+    <Fragment key={index}>
+      <div className="flex justify-center items-center ">
         {checkCompletion(index)}
         <p className="ml-4">{step}</p>
       </div>
@@ -40,7 +41,7 @@ const Pagination = ({ currentPage }: PageProps) => {
            h-[2px] flex-1 mx-4 block
         `}
       />
-    </>
+    </Fragment>
   ));
 
   return <div className="py-5 flex items-center">{displaySteps}</div>;
