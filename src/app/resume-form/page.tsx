@@ -19,6 +19,26 @@ const resumeForm = () => {
     setPageNum(pageNum + 1);
   };
 
+  const nextStep = (
+    <button
+      className="text-white bg-violet-600 stdBtn btnHover"
+      onClick={() => handleNextClick()}
+    >
+      Next Step
+    </button>
+  );
+
+  const submitBtn = (
+    <button
+      className="text-white bg-violet-600 stdBtn btnHover"
+      onClick={() => handleNextClick()}
+    >
+      Submit Resume
+    </button>
+  );
+
+  const buttonValidation = pageNum !== 5 ? nextStep : submitBtn;
+
   return (
     <>
       <div className="mt-16 mx-auto px-4 max-w-[960px]">
@@ -45,12 +65,7 @@ const resumeForm = () => {
           >
             Back
           </button>
-          <button
-            className="text-white bg-violet-600 stdBtn btnHover"
-            onClick={() => handleNextClick()}
-          >
-            Next Step
-          </button>
+          {buttonValidation}
         </div>
       </div>
     </>
