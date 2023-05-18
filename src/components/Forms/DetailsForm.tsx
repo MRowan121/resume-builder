@@ -1,8 +1,24 @@
+import { useState } from "react";
+
 type PageProps = {
   currentPage: number;
 };
 
 const DetailsForm = ({ currentPage }: PageProps) => {
+  const [details, setDetails] = useState({
+    name: "",
+    title: "",
+    email: "",
+    phone: "",
+    github: "",
+    linkedin: "",
+    portfolio: "",
+  });
+
+  const handleChange = (e: { target: { name: string; value: string } }) => {
+    setDetails({ ...details, [e.target.name]: e.target.value });
+  };
+
   return (
     <div
       className={`flex flex-wrap my-10 ${currentPage === 1 ? null : "hidden"}`}
@@ -17,25 +33,31 @@ const DetailsForm = ({ currentPage }: PageProps) => {
             type="text"
             placeholder="Your name"
             id="name"
+            name="name"
             className="detailsForm"
             required
             autoComplete="off"
+            // value={details.name}
+            onChange={(e) => handleChange(e)}
           />
         </div>
       </div>
       {/* Job Title */}
       <div className="p-2 basis-1/3">
         <div className="flex flex-col">
-          <label htmlFor="job-title" className="mb-1 text-sm break-words">
+          <label htmlFor="title" className="mb-1 text-sm break-words">
             Job Title<sup className="text-red-500">*</sup>
           </label>
           <input
             type="text"
             placeholder="Job Title"
-            id="job-title"
+            id="title"
+            name="title"
             className="detailsForm"
             required
             autoComplete="off"
+            // value={details.title}
+            onChange={(e) => handleChange(e)}
           />
         </div>
       </div>
@@ -49,9 +71,12 @@ const DetailsForm = ({ currentPage }: PageProps) => {
             type="email"
             placeholder="Your email"
             id="email"
+            name="email"
             className="detailsForm"
             required
             autoComplete="off"
+            // value={details.email}
+            onChange={(e) => handleChange(e)}
           />
         </div>
       </div>
@@ -65,9 +90,12 @@ const DetailsForm = ({ currentPage }: PageProps) => {
             type="tel"
             placeholder="Contact"
             id="phone"
+            name="phone"
             className="detailsForm"
             required
             autoComplete="off"
+            // value={details.phone}
+            onChange={(e) => handleChange(e)}
           />
         </div>
       </div>
@@ -81,8 +109,11 @@ const DetailsForm = ({ currentPage }: PageProps) => {
             type="text"
             placeholder="GitHub"
             id="github"
+            name="github"
             className="detailsForm"
             autoComplete="off"
+            // value={details.github}
+            onChange={(e) => handleChange(e)}
           />
         </div>
       </div>
@@ -96,8 +127,11 @@ const DetailsForm = ({ currentPage }: PageProps) => {
             type="text"
             placeholder="LinkedIn"
             id="linkedin"
+            name="linkedin"
             className="detailsForm"
             autoComplete="off"
+            // value={details.linkedin}
+            onChange={(e) => handleChange(e)}
           />
         </div>
       </div>
@@ -111,8 +145,11 @@ const DetailsForm = ({ currentPage }: PageProps) => {
             type="text"
             placeholder="Your portfolio website"
             id="portfolio"
+            name="portfolio"
             className="detailsForm"
             autoComplete="off"
+            // value={details.portfolio}
+            onChange={(e) => handleChange(e)}
           />
         </div>
       </div>
