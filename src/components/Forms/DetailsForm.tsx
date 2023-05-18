@@ -1,6 +1,12 @@
-const DetailsForm = () => {
+type PageProps = {
+  currentPage: number;
+};
+
+const DetailsForm = ({ currentPage }: PageProps) => {
   return (
-    <div className="flex flex-wrap my-10">
+    <div
+      className={`flex flex-wrap my-10 ${currentPage === 1 ? null : "hidden"}`}
+    >
       {/* Name */}
       <div className="p-2 basis-2/3">
         <div className="flex flex-col">

@@ -1,6 +1,12 @@
-const SummaryForm = () => {
+type PageProps = {
+  currentPage: number;
+};
+
+const SkillsForm = ({ currentPage }: PageProps) => {
   return (
-    <div className="flex flex-wrap my-10">
+    <div
+      className={`flex flex-wrap my-10 ${currentPage === 4 ? null : "hidden"}`}
+    >
       {/* Name */}
       <div className="p-2 basis-full">
         <div className="flex flex-col">
@@ -23,4 +29,4 @@ const SummaryForm = () => {
   );
 };
 
-export default SummaryForm;
+export default SkillsForm;

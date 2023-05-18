@@ -1,6 +1,12 @@
-const WorkForm = () => {
+type PageProps = {
+  currentPage: number;
+};
+
+const WorkForm = ({ currentPage }: PageProps) => {
   return (
-    <div className="flex flex-wrap my-10">
+    <div
+      className={`flex flex-wrap my-10 ${currentPage === 3 ? null : "hidden"}`}
+    >
       {/* Company */}
       <div className="p-2 basis-2/3">
         <div className="flex flex-col">

@@ -1,10 +1,10 @@
 import { BsCheckLg } from "react-icons/bs";
 
 type PageProps = {
-  completed: number;
+  currentPage: number;
 };
 
-const Pagination = ({ completed }: PageProps) => {
+const Pagination = ({ currentPage }: PageProps) => {
   const steps = [
     "Personal Details",
     "Summary",
@@ -18,11 +18,11 @@ const Pagination = ({ completed }: PageProps) => {
       <p
         className={`
           pageNum 
-          ${i === completed ? "border-2 border-violet-600" : null} 
-          ${i < completed ? "bg-violet-600" : null}
+          ${i === currentPage - 1 ? "border-2 border-violet-600" : null} 
+          ${i < currentPage - 1 ? "bg-violet-600" : null}
         `}
       >
-        {i < completed ? <BsCheckLg className="text-3xl" /> : `${i + 1}`}
+        {i < currentPage - 1 ? <BsCheckLg className="text-3xl" /> : `${i + 1}`}
       </p>
     );
   };
@@ -35,7 +35,7 @@ const Pagination = ({ completed }: PageProps) => {
       </div>
       <div
         className={`
-          ${index < completed ? "bg-violet-600" : "bg-white"} 
+          ${index < currentPage - 1 ? "bg-violet-600" : "bg-white"} 
           ${index + 1 === 5 ? "hidden" : null} 
            h-[2px] flex-1 mx-4 block
         `}
