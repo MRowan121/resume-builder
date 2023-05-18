@@ -43,7 +43,11 @@ const resumeForm = () => {
     <>
       <div className="mt-16 mx-auto px-4 max-w-[960px]">
         {/* Back Button */}
-        <button className="text-white bg-violet-600 stdBtn mb-10">
+        <button
+          className="text-white bg-violet-600 stdBtn mb-10"
+          disabled={pageNum === 1}
+          onClick={() => handleBackClick()}
+        >
           Go Back
         </button>
 
@@ -61,6 +65,7 @@ const resumeForm = () => {
         <div className="flex space-x-3 justify-center items-center">
           <button
             className="text-violet-600 border-[1px] border-violet-600 stdBtn"
+            disabled={pageNum === 1}
             onClick={() => handleBackClick()}
           >
             Back
